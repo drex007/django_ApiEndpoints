@@ -88,6 +88,12 @@ class ProductDestroyView(generics.DestroyAPIView):
 product_destroy_view = ProductDestroyView.as_view()
 
 
+class ProductListView(generics.ListAPIView):
+    
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+ 
+product_listview = ProductListView.as_view()
 
 
 
